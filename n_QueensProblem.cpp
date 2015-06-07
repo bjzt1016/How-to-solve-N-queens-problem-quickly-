@@ -49,7 +49,7 @@ void backtrack(int t){
 	else{
 		for(i=1;i<=n;i++){
 			if(flag==1)
-			return;
+			        return;
 			x[t]=i;
 			if(place(t))
 				backtrack(t+1);
@@ -79,16 +79,16 @@ int main(){
 		}
 		int stop;
 		cin>>stop;
-        flag=0;
+                flag=0;
 		int time1=time(0);
 		while(1){
 		    while(!queenLV(stop) );
 		    backtrack(stop+1);
 		    if(flag==1)
-		    break;
+		            break;
 		}
 		int time2=time(0);
-	    cout<<"running time:"<<time2-time1<<endl;
+	        cout<<"running time:"<<time2-time1<<endl;
 		for(i=1;i<=n;i++){
 			cout<<y[i]<<endl;  
 		}
